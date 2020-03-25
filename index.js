@@ -10,7 +10,7 @@ app.listen(3000, () => {
     console.log("Server started...");
 });
 
-app.get("/", (req, res) => {
+app.get("api/user", (req, res) => {
     const sqlConnection = mysql.createConnection(sqlConfig);
 
     sqlConnection.query(
@@ -25,3 +25,4 @@ app.get("/", (req, res) => {
         }
     );
 });
+

@@ -26,3 +26,18 @@ app.get("api/user", (req, res) => {
     );
 });
 
+app.get("api/user/create", (req, res) => {
+    const sqlConnection = mysql.createConnection(sqlConfig);
+    
+    sqlConnection.query(
+        "INSERT INTO node_users VALUES (NULL, 'loco@yopmail.net', 'pass', 'pedro' 'tata', '1950-03-18',)",
+        (error, result) => {
+            if (error) {
+                console.log("ERROR :", error.code);
+            }else {
+                console.log(result);
+            }
+            sqlConnection.end();
+        }
+    );
+});

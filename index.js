@@ -34,8 +34,10 @@ app.get("api/user/create", (req, res) => {
         (error, result) => {
             if (error) {
                 console.log("ERROR :", error.code);
+                res.status(503).send("oups... en error has occured !");
             }else {
                 console.log(result);
+                res.send({ status: "OK" });
             }
             sqlConnection.end();
         }

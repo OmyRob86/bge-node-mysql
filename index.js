@@ -10,6 +10,8 @@ app.listen(3000, () => {
     console.log("Server started...");
 });
 
+app.use(express.static("./public"));
+
 app.get("/api/user", (req, res) => {
     const sqlConnection = mysql.createConnection(sqlConfig);
 

@@ -1,0 +1,8 @@
+- [x] creer un dossier public
+- [ ] l'utilistaeur pour les fichiers statiques dans express
+- [ ] creér un indew.html avec un formulaires HTML qui contient les champs suivants :
+    - [ ] email
+    - [ ] password
+    - [ ] firstname
+    - [ ] lastname
+    - [ ] birthdate
